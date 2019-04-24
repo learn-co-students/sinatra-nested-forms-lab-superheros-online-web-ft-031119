@@ -5,13 +5,13 @@
     <title></title>
   </head>
   <body>
-    <%=params[:team][:name]%><br>
-    Team Motto: <%=params[:team][:motto]%><br><br>
+    <%=@team.name%><br>
+    Team Motto: <%=@team.motto%><br><br>
 
-    <% params[:team][:members].each do |member| %>
-      Hero Name: <%=member[:name]%><br>
-      Hero Power: <%=member[:power]%><br>
-      Hero Biography: <%=member[:bio]%><br><br>
+    <% @heros.each do |hero| %>
+      Hero Name: <%=hero.name%><br>
+      Hero Power: <%=hero.power%><br>
+      Hero Biography: <%=hero.bio%><br><br>
     <% end %>
 
   </body>
