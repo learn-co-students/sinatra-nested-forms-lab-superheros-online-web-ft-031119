@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%=params[:team][:name]%><br>
+    Team Motto: <%=params[:team][:motto]%><br><br>
 
+    <% params[:team][:members].each do |member| %>
+      Hero Name: <%=member[:name]%><br>
+      Hero Power: <%=member[:power]%><br>
+      Hero Biography: <%=member[:bio]%><br><br>
+    <% end %>
 
-
+  </body>
+</html>
